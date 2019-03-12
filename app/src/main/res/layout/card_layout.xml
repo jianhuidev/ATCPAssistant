@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<!--<LinearLayout-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="wrap_content"-->
+	<!--android:orientation="vertical">-->
+	<ProgressBar
+		android:id="@+id/progress_bar_card"
+		style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:indeterminate="true"
+		android:visibility="invisible" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="16dp"
+			android:text="通讯模式"
+			android:textSize="16dp"
+			android:textStyle="italic|bold" />
+
+		<RadioGroup
+			android:id="@+id/rg_card"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginLeft="16dp">
+
+			<RadioButton
+				android:id="@+id/tcp_client_card"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="TCP Client" />
+
+			<RadioButton
+				android:id="@+id/tcp_server_card"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="TCP Server" />
+
+			<RadioButton
+				android:id="@+id/udp_card"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="UDP" />
+		</RadioGroup>
+	<!--</LinearLayout>-->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginTop="16dp"
+		android:background="@color/gray_light"/>
+
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="16dp"
+		android:layout_marginTop="16dp"
+		android:text="链接设置"
+		android:textSize="16dp"
+		android:textStyle="italic|bold" />
+	<android.support.design.widget.TextInputLayout
+		android:id="@+id/ip_et_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp">
+		<android.support.design.widget.TextInputEditText
+			android:id="@+id/ip_et"
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:hint="远程主机"
+			android:text="192.168.2.2"
+			android:inputType="text"
+			android:singleLine="true"
+			android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp"/>
+
+	</android.support.design.widget.TextInputLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<android.support.design.widget.TextInputLayout
+		android:id="@+id/remote_port_et_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<android.support.design.widget.TextInputEditText
+			android:id="@+id/remote_port_et"
+			android:layout_width="70dp"
+			android:layout_height="wrap_content"
+			android:hint="远程端口"
+			android:text="6666"
+			android:inputType="text"
+			android:singleLine="true"
+			android:layout_marginLeft="16dp" />
+
+	</android.support.design.widget.TextInputLayout>
+		<android.support.design.widget.TextInputLayout
+		android:id="@+id/native_port_et_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<android.support.design.widget.TextInputEditText
+			android:id="@+id/native_port_et"
+			android:layout_width="70dp"
+			android:layout_height="wrap_content"
+			android:hint="本地端口"
+			android:text="8888"
+			android:inputType="text"
+			android:singleLine="true"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="16dp"/>
+
+	</android.support.design.widget.TextInputLayout>
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="16dp">
+			<ToggleButton
+				android:id="@+id/toggle_btn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:textOff="链接网络"
+				android:textOn="断开网络"/>
+		</FrameLayout>
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginTop="5dp"
+		android:background="@color/gray_light"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="本地ip："
+			android:layout_marginTop="16dp"
+			android:layout_marginLeft="16dp"/>
+		<TextView
+			android:id="@+id/native_ip_tv_card"
+			android:text="192.168.2.105"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"/>
+
+		<TextView
+			android:id="@+id/link_state_tv_card"
+			android:text="无连接"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:layout_marginLeft="5dp"/>
+		<TextView
+			android:id="@+id/target_ip_tv_card"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="192.168.2.105"
+			android:layout_marginTop="16dp"
+			android:layout_marginLeft="5dp"
+			android:visibility="gone"/>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			android:text="收到："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="5dp"/>
+		<TextView
+			android:id="@+id/receive_tv_card"
+			android:text="0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"/>
+		<TextView
+			android:text="发送："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="5dp"/>
+		<TextView
+			android:id="@+id/send_tv_card"
+			android:text="0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"/>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<FrameLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1">
+
+		</FrameLayout>
+		<FrameLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1">
+
+			<TextView
+				android:id="@+id/confirm_card"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:layout_gravity="center_horizontal"
+				android:gravity="center"
+				android:text="确定"
+				android:textColor="@color/colorAccent"
+				android:textSize="16dp"
+				android:textStyle="bold"
+				android:background="?android:attr/selectableItemBackgroundBorderless"
+				android:clickable="true"
+				android:focusable="true"
+				tools:ignore="NewApi" />
+
+		</FrameLayout>
+	</LinearLayout>
+
+
+
+</LinearLayout>

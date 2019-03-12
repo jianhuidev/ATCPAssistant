@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical">
+
+	 <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar_main"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--app:layout_scrollFlags="scroll|enterAlways"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay"/>-->
+
+	<!--<android.support.v7.widget.CardView-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="0dp"-->
+		<!--android:layout_margin="5dp"-->
+		<!--android:layout_weight="0.5"-->
+		<!--app:cardCornerRadius="0dp">-->
+		<!---->
+		<!--<LinearLayout-->
+			<!--android:layout_width="match_parent"-->
+			<!--android:layout_height="match_parent">-->
+			<!---->
+		<!--</LinearLayout>-->
+
+	<!--</android.support.v7.widget.CardView>-->
+
+	<android.support.v7.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_weight="1"
+		app:cardCornerRadius="0dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<FrameLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:text="数据发送区"
+						android:layout_margin="8dp"/>
+				</FrameLayout>
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="接收:"
+						android:layout_gravity="center_vertical"
+						android:layout_marginLeft="8dp" />
+
+					<TextView
+						android:id="@+id/receive_count_tv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="0"
+						android:layout_gravity="center_vertical" />
+				</LinearLayout>
+			</LinearLayout>
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/gray_light" />
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<FrameLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<CheckBox
+						android:id="@+id/hex_show_cb"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="十六进制显示"
+						android:layout_gravity="center"/>
+				</FrameLayout>
+				<FrameLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<CheckBox
+						android:id="@+id/word_wrap_cb"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="自动换行"
+						android:layout_gravity="center"/>
+				</FrameLayout>
+				<FrameLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<TextView
+						android:id="@+id/clear_receive_tv"
+						android:text="清空接收区"
+						android:layout_gravity="center"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="?android:attr/selectableItemBackgroundBorderless"
+						android:clickable="true"
+						android:focusable="true"
+						tools:ignore="NewApi" />
+				</FrameLayout>
+			</LinearLayout>
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/gray_light" />
+				<TextView
+					android:id="@+id/receive_tv"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textSize="20sp"
+					android:layout_margin="10dp"/>
+
+		</LinearLayout>
+
+	</android.support.v7.widget.CardView>
+	<android.support.v7.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_margin="5dp"
+		android:layout_weight="1"
+		app:cardCornerRadius="0dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<FrameLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:text="数据发送区"
+						android:layout_margin="8dp"/>
+				</FrameLayout>
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="发送:"
+						android:layout_gravity="center_vertical"
+						android:layout_marginLeft="8dp" />
+
+					<TextView
+						android:id="@+id/send_count_tv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="0"
+						android:layout_gravity="center_vertical" />
+				</LinearLayout>
+			</LinearLayout>
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/gray_light" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<FrameLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<CheckBox
+						android:id="@+id/hex_send_cb"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="十六进制发送"
+						android:layout_gravity="center"/>
+				</FrameLayout>
+				<FrameLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<CheckBox
+						android:id="@+id/auto_send_cb"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="自动发送"
+						android:layout_gravity="center"/>
+				</FrameLayout>
+				<FrameLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1">
+					<EditText
+						android:id="@+id/period_et"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:hint="周期（ms）"
+						android:background="@null"
+						android:textSize="14dp"
+						android:layout_gravity="center"/>
+				</FrameLayout>
+
+			</LinearLayout>
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/gray_light" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1">
+
+				<EditText
+					android:id="@+id/send_et"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@null"
+					android:layout_margin="10dp"/>
+			</LinearLayout>
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/gray_light" />
+			<LinearLayout
+				android:id="@+id/layout_btn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<FrameLayout
+					android:id="@+id/clear_layout"
+					android:layout_width="0dp"
+					android:layout_height="50dp"
+					android:layout_weight="1"
+					android:background="?android:attr/selectableItemBackground"
+					android:clickable="true"
+					android:focusable="true"
+					tools:ignore="NewApi">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:text="清空发送区" />
+				</FrameLayout>
+
+				<View
+					android:layout_width="1dp"
+					android:layout_height="match_parent"
+					android:background="@color/gray_light" />
+
+				<FrameLayout
+					android:id="@+id/send_layout"
+					android:layout_width="0dp"
+					android:layout_height="50dp"
+					android:layout_weight="1"
+					android:background="?android:attr/selectableItemBackground"
+					android:clickable="true"
+					android:focusable="true"
+					tools:ignore="NewApi">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:text="发送" />
+
+				</FrameLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</android.support.v7.widget.CardView>
+
+
+</LinearLayout>
