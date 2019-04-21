@@ -1,12 +1,11 @@
 # ATCPAssistant
 Android版TCP调试助手
 
-Materials Design风格
-Socket
-MVP
-
-
 <img src="app/src/main/res/mipmap-xxxhdpi/logo.png" width="180" height="180">
+
+Materials Design风格 
+Socket 
+MVP
 
 
 <img src="/images/screen1.jpg" width="360" height="640">
